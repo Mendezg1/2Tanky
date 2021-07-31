@@ -102,11 +102,17 @@ public class Tank1 extends Tanques
             getWorld().addObject(b1, getX(), getY()+getImage().getHeight());
         }
         b1.setRotation(getRotation()+90);
+        GreenfootSound disparo = new GreenfootSound("disparo.mp3");
+        disparo.setVolume(15);
+        disparo.play();
     }
     public void morir(){
         Actor bala = getOneIntersectingObject(bala.class);
         if(bala != null){
             explosion exp = new explosion();
+            GreenfootSound explo = new GreenfootSound("explosion.mp3");
+            explo.setVolume(25);
+            explo.play();
             getWorld().addObject(exp, getX(), getY());
             getWorld().removeObject(this);
         }
