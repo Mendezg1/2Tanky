@@ -10,6 +10,7 @@ public class Tank1 extends Tanques
 {
     public void act() 
     {
+            try{
             morir();
             if (Greenfoot.isKeyDown("left")){
                 mover("left");
@@ -27,6 +28,8 @@ public class Tank1 extends Tanques
                 int ang = getRotation();
                 disparar1(ang);
             }
+        }
+        catch(Exception e){}
     } 
     public void mover(String a){
         Actor actor = getOneIntersectingObject(bderecha.class);

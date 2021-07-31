@@ -11,6 +11,7 @@ public class Tank2 extends Tanques
     
     public void act() 
     {
+            try{
             morir();
             if (Greenfoot.isKeyDown("A")){
                 mover("A");
@@ -28,6 +29,10 @@ public class Tank2 extends Tanques
                 int ang = getRotation();
                 disparar(ang);
             }
+        }
+        catch(Exception e){
+        }
+        
     } 
     public void disparar(int a){
             if(a== 90){
