@@ -8,10 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class VV extends Actor
 {
-    /**
-     * Act - do whatever the VV wants to do. This method is called whenever
-     * the 'Act' or 'Run' button gets pressed in the environment.
-     */
+    // Esta clase es la imagen que se muestra en los mapas como las victorias del verde
     public int v;
     public VV(int valor){
         setImage(new GreenfootImage(100, 20));

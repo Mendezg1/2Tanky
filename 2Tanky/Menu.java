@@ -21,7 +21,7 @@ public class Menu extends World
         musica();
     }
 
-    public void musica(){
+    public void musica(){// Pone música de ambiente
         GreenfootSound music = new GreenfootSound("musica.mp3");
         music.setVolume(30);
         music.playLoop();
@@ -32,7 +32,7 @@ public class Menu extends World
         addObject(new Start(), 170, 440);
         addObject(new Exit(), 170, 540);
     }
-    public void act(){
+    public void act(){// Permite el movimiento de la flecha en el Menú inicial
         if((Greenfoot.isKeyDown("W") ||Greenfoot.isKeyDown("up")) && opcion!=0){opcion++;}
         if(Greenfoot.isKeyDown("S") ||Greenfoot.isKeyDown("down") && opcion!=1){opcion--;}
         if(opcion >= 2) opcion=0;

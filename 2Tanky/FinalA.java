@@ -14,7 +14,7 @@ public class FinalA extends World
      * 
      */
     public FinalA()
-    {    
+    {    //Es una imagen que aparece cuando el Azul gana
         super(1083, 700, 1); 
     }
 }

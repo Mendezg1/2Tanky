@@ -10,7 +10,7 @@ public class Seleccionar extends Actor
 {
     
     public void act() 
-    {
+    {// Esta clase representa la imagen en la selección de rondas para comenzar a jugar.
         setImage(new GreenfootImage(450, 50));
         GreenfootImage img = getImage();
         Font font = img.getFont();

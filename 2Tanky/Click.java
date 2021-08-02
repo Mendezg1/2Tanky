@@ -10,7 +10,7 @@ public class Click extends Actor
 {
     
     public void act() 
-    {
+    {// Esta clase es la imagen en el menú Instrucciones para cambiar al siguiente menú.
         setImage(new GreenfootImage(450, 50));
         GreenfootImage img = getImage();
         Font font = img.getFont();

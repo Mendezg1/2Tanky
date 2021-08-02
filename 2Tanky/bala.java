@@ -13,7 +13,7 @@ public class bala extends Mover
      * the 'Act' or 'Run' button gets pressed in the environment.
      */
     public void act() 
-    {
+    {//Permite que la bala se mueva y choque con los muros
         move(5);
         Actor pared = getOneIntersectingObject(Borde.class);
         if(pared != null)

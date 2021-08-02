@@ -12,7 +12,7 @@ public class mapa4 extends World
     public Tank1 tanquev = new Tank1();
     public Tank2 tanquea = new Tank2();
     public mapa4(int verde, int azul, int rondas, int rondasf)
-    {    
+    {
         super(1300, 700, 1); 
         Actor cont1 = new VV(verde);
         addObject(cont1, 1250, 100);

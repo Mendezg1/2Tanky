@@ -8,6 +8,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class VA extends Actor
 {
+    //Esta clase es la imagen que muestra en el mapa las victorias del azul
     public int v = 0;
     public VA(int valor){
         setImage(new GreenfootImage(100, 20));

@@ -14,7 +14,7 @@ public class Instrucciones extends World
         super(1083, 700, 1); 
         addObject(click, 1083/2,680);
     }
-    public void act(){
+    public void act(){//Es una imagen creada para explicar los controles, la función permite continuar con un click.
         if(Greenfoot.mouseClicked(click))
             Greenfoot.setWorld(new Menu2());
     }

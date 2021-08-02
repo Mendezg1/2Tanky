@@ -12,7 +12,7 @@ public class mapa1 extends World
     public Tank1 tanquev = new Tank1();
     public Tank2 tanquea = new Tank2();
     public mapa1(int verde, int azul, int rondas, int rondasf)
-    {    
+    {    // Se actualizan los valores de la clase Victorias y se crean los contadores (igual en mapa 2,3 y 4)
         super(1300, 700, 1); 
         prepare();
         Actor cont1 = new VV(verde);

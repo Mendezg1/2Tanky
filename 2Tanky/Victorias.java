@@ -8,6 +8,8 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Victorias extends Actor
 {
+    // Esta clase contiene los valores de las rondas pasadas, las victorias por tanque y las rondas a cumplir (bo3 o bo5). Tiene funciones para sumar y 
+    // devolver el valor deseado, victorias del verde, azul, rondas pasadas, rondas a cumplir.
     int verde;
     int azul;
     int rondas;

@@ -12,7 +12,7 @@ public class mapa extends World
     public Actor cont2;
     public Victorias cont = new Victorias();
     public mapa(int ronda)
-    {    
+    {// Se crean los contadores de victorias
         super(1300, 700, 1); 
         cont.obtenerrondasf(ronda);
         prepare();
@@ -79,7 +79,7 @@ public class mapa extends World
         bderecha5.setLocation(1196,636);
         bderecha4.setLocation(5,520);
     }
-    public void act(){
+    public void act(){// Se verifica la destrucción de un tanque, suma la victoria al respectivo tanque y crea el nuevo mapa (igual en el resto de mapas).
         if(this.getObjects(explosion.class).size() != 0){
             if(this.getObjects(Tank1.class).size() == 1){
                 cont.masverde();

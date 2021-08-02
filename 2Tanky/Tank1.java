@@ -8,10 +8,12 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot and MouseInfo)
  */
 public class Tank1 extends Tanques
 {
+    //Ambos tanques contienen las mismas funciones, con parámetros distintos en ciertas funciones por los controles
     public void act() 
-    {
+    {       //Se utilizó try/catch para evitar el mensaje de error mostrado en la Fase 2, pues no es posible eliminar el error, pero sí el mensaje.
             try{
             morir();
+            // Dependiendo de las teclas presionadas, se envían como parámetro a las funciones de mover
             if (Greenfoot.isKeyDown("left")){
                 mover("left");
             }
@@ -24,14 +26,14 @@ public class Tank1 extends Tanques
             if (Greenfoot.isKeyDown("down")){
                 mover("down");
             }
-            if (Greenfoot.isKeyDown(".")){
+            if (Greenfoot.isKeyDown(".")){//se envía como valor el parámetro ángulo a la función disparar
                 int ang = getRotation();
                 disparar1(ang);
             }
         }
         catch(Exception e){}
     } 
-    public void mover(String a){
+    public void mover(String a){//se mueve el tanque dependiendo de la tecla seleccionada, si se ubica un borde, se llama la función borde
         Actor actor = getOneIntersectingObject(bderecha.class);
         Actor actor1 = getOneIntersectingObject(linea.class);
         Actor actor2 = getOneIntersectingObject(barriba.class);
@@ -73,7 +75,7 @@ public class Tank1 extends Tanques
                 }
         }
     }
-    public void bordes(String b){
+    public void bordes(String b){//aleja al tanque dando la sensación de choque para que el mapa cumpla con los límites
         if (b=="left"){
             setLocation(getX()+30, getY());
         }
@@ -87,7 +89,8 @@ public class Tank1 extends Tanques
             setLocation(getX(), getY()+30);
         }
     }
-    public void disparar1(int a){
+    public void disparar1(int a){//se utiliza el ángulo para darle trayectoria a la bala, generada lejos del tanque para no causar problemas de
+        //autodestrucción
         bala b1 = new bala();
         if(a== 90){
             getWorld().addObject(b1, getX()-getImage().getWidth(), getY());
@@ -106,7 +109,7 @@ public class Tank1 extends Tanques
         disparo.setVolume(15);
         disparo.play();
     }
-    public void morir(){
+    public void morir(){// se verifica si una bala impactó al tanque, si es el caso, se elimina el actor y se crea la explosión
         Actor bala = getOneIntersectingObject(bala.class);
         if(bala != null){
             explosion exp = new explosion();

@@ -98,7 +98,7 @@ public class mapa2 extends World
                 rondas = cont.darrondas();
                 rondasf = cont.darrondasf();
                 ganador = cont.verifrondas();
-                if (ganador){
+                if (ganador){// Se verifica si ya existe un ganador en caso de ser bo3 (igual en los mapas siguientes).
                     Greenfoot.setWorld(new FinalV());
                 }
                 else {

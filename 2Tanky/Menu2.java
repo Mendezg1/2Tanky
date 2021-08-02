@@ -21,7 +21,7 @@ public class Menu2 extends World
         Seleccionar sec = new Seleccionar();
         addObject(sec, 270, 340);
     }
-    public void act(){
+    public void act(){// Se utilizan imágenes para obtener el número de rondas deseadas
         if(Greenfoot.mouseClicked(b3)){
             Greenfoot.setWorld(new mapa(3));
         }

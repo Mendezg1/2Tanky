@@ -14,7 +14,7 @@ public class FinalV extends World
      * 
      */
     public FinalV()
-    {    
+    {    // Es una imagen que aparece cuando el Verde gana
         
         super(1083, 700, 1); 
     }
