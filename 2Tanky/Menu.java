@@ -18,20 +18,21 @@ public class Menu extends World
     { 
         super(1083, 600, 1); 
         prepare();
-        
+        musica();
     }
 
-    /**
-     * Prepare the world for the start of the program.
-     * That is: create the initial objects and add them to the world.
-     */
+    public void musica(){
+        GreenfootSound music = new GreenfootSound("musica.mp3");
+        music.setVolume(30);
+        music.playLoop();
+    }
     private void prepare()
     {
         addObject(flecha,69,440);
         addObject(new Start(), 170, 440);
         addObject(new Exit(), 170, 540);
     }
-    public void act(){//permite que el jugador pueda seleccionar las opciones del menu
+    public void act(){
         if((Greenfoot.isKeyDown("W") ||Greenfoot.isKeyDown("up")) && opcion!=0){opcion++;}
         if(Greenfoot.isKeyDown("S") ||Greenfoot.isKeyDown("down") && opcion!=1){opcion--;}
         if(opcion >= 2) opcion=0;
